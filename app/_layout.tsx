@@ -4,7 +4,7 @@ export default function RootLayout() {
   return (
       <Stack>
         <Stack.Screen name="index" options={{
-            headerTitle: "Maynard Online Store"
+            headerTitle: "Magoncia Online Store"
         }}/>
       </Stack>
   );

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import { useContext, useState } from "react";
 import {
   FlatList,
   Image,
@@ -37,7 +37,7 @@ export default function PostsList() {
         </Text>
 
         <View style={styles.priceRow}>
-          <Text style={styles.price}>${item.price.toFixed(2)}</Text>
+          <Text style={styles.price}>₱{item.price.toFixed(2)}</Text>
           {item.discountPercentage > 0 && (
             <View style={styles.discountBadge}>
               <Text style={styles.discountText}>

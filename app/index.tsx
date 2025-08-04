@@ -37,7 +37,8 @@ const AppContent: React.FC = () => {
   }, []);
 
   const handleReload = () => {
-    fetchPosts();
+  setPosts([]);
+  fetchPosts();
   };
 
   return (
@@ -62,11 +63,22 @@ const Index: React.FC = () => (
 export default Index;
 
 const styles = StyleSheet.create({
+  gradient: {
+    flex: 1,
+  },
   container: {
     flex: 1,
     paddingTop: 50,
-    paddingHorizontal: 20,
-    backgroundColor: "#f9f9f9",
+    paddingHorizontal: 16,
+    backgroundColor: "#60677aff", 
+  },
+  title: {
+    fontSize: 28,
+    fontWeight: "bold",
+    color: "#1e293b",
+    textAlign: "center",
+    marginBottom: 18,
+    letterSpacing: 1,
   },
   buttonContainer: {
     alignItems: "center",
@@ -74,20 +86,24 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   button: {
-    backgroundColor: "#2563EB", 
-    paddingVertical: 14,
-    paddingHorizontal: 32,
-    borderRadius: 10,
-    shadowColor: "#000",
+    borderRadius: 12,
+    overflow: "hidden",
+    elevation: 6,
+    shadowColor: "#2563EB",
     shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.2,
-    shadowRadius: 6,
-    elevation: 5,
+    shadowOpacity: 0.25,
+    shadowRadius: 8,
+  },
+  buttonGradient: {
+    paddingVertical: 16,
+    paddingHorizontal: 38,
+    borderRadius: 12,
+    alignItems: "center",
   },
   buttonText: {
-    color: "#ffffff",
-    fontSize: 17,
+    color: "#fff",
+    fontSize: 18,
     fontWeight: "bold",
-    letterSpacing: 0.5,
+    letterSpacing: 0.7,
   },
 });
